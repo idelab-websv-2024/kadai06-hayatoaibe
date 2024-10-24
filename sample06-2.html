@@ -22,6 +22,15 @@ function clearTwttrSpace(){
 function showProfile(username)
 {
 clearTwttrSpace();
+
+if(!username){
+  //alert if input form is empty
+ // !'' = true, !'nasa' = false
+alert("Insert User ID");
+return false; // Abort
+}
+
+// X(Twitter) API
   twttr.widgets.createTimeline(
       {
         sourceType: "profile",
@@ -29,6 +38,7 @@ clearTwttrSpace();
       },
       document.getElementById("twttrSpace")
   );
+
 }
   </script>
 
