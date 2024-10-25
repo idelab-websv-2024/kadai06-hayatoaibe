@@ -29,8 +29,7 @@ if(!username){
 alert("Insert User ID");
 return false; // Abort
 }
-
-// X(Twitter) API
+// widgets.js controls
   twttr.widgets.createTimeline(
       {
         sourceType: "profile",
@@ -38,15 +37,15 @@ return false; // Abort
       },
       document.getElementById("twttrSpace")
   );
-
 }
+  
   </script>
 
   <body>
     <div class="main">
       <div class="forms">
       <input type="text" id="userinput">
-      <button type="submit" onclick='showProfile(userinput.value)'>show profile</button></div>
+      <button type="submit" onclick='showProfile(userinput.value)'>show profile</button>
     </div>
     <div id='twttrSpace'></div>
   </div>
